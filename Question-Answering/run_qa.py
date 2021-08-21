@@ -47,6 +47,11 @@ from transformers.utils.versions import require_version
 from utils_qa import postprocess_qa_predictions
 
 
+squad_location_path = "/content/Native_Linguistic_Model-Question_Answering_Syster_using_Transformers_and_SQuAD/Question-Answering/squad.py"
+hi_train_data_path = "/content/Native_Linguistic_Model-Question_Answering_Syster_using_Transformers_and_SQuAD/Datasets/Main/hindi/hi_dataset.json"
+hi_validation_data_path = "/content/Native_Linguistic_Model-Question_Answering_Syster_using_Transformers_and_SQuAD/Datasets/Main/hindi/hi_val_dataset.json"
+
+
 # Will error if the minimal version of Transformers is not installed. Remove at your own risks.
 # check_min_version("4.10.0.dev0")
 
@@ -264,7 +269,7 @@ def main():
         # raw_datasets = load_dataset(
         #     data_args.dataset_name, data_args.dataset_config_name, cache_dir=model_args.cache_dir
         # )
-        raw_datasets = load_dataset("/content/SQuAD-Datasets-Hindi-English/question-answering/squad.py", data_files={'train': '/content/SQuAD-Datasets-Hindi-English/hi_dataset.json', 'dev': '/content/SQuAD-Datasets-Hindi-English/hi_val_dataset.json'})
+        raw_datasets = load_dataset(squad_location_path, data_files={'train': hi_train_data_path, 'dev': hi_validation_data_path})
 
     else:
         data_files = {}
@@ -279,7 +284,7 @@ def main():
             data_files["test"] = data_args.test_file
             extension = data_args.test_file.split(".")[-1]
         # raw_datasets = load_dataset(extension, data_files=data_files, field="data", cache_dir=model_args.cache_dir)
-        raw_datasets = load_dataset("/content/SQuAD-Datasets-Hindi-English/question-answering/squad.py", data_files={'train': data_files["train"], 'dev': data_files["validation"]})
+        raw_datasets = load_dataset(squad_location_path, data_files={'train': data_files["train"], 'dev': data_files["validation"]})
 
     #  See more about loading any type of standard or custom dataset (from files, python dict, pandas DataFrame, etc) at
     # https://huggingface.co/docs/datasets/loading_datasets.html.
