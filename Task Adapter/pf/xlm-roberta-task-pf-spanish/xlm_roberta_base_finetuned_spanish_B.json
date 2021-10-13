@@ -1,0 +1,32 @@
+{
+  "model_path": "../input/xlmrobertabasespanish",
+  "test_path": "",
+  "output_dir": "./",
+  "model_name": "xlm-roberta-base",
+  "version": "spanish-B",
+  "seed": 42,
+  "test_size": 0.1,
+  "debug": false,
+  "max_length": 256,
+  "doc_stride": 128,
+  "batch_size": 8,
+  "learning_rate": 0.0001,
+  "warmup_ratio": 0.1,
+  "gradient_accumulation_steps": 4,
+  "num_train_epochs": 1,
+  "weight_decay": 0.01,
+  "n_best_size": 20,
+  "max_answer_length": 30,
+  "squad_v2": false,
+  "scores": {
+    "exact_match": 46.6,
+    "f1": 68.47979579727135,
+    "description": "Used Full dataset to test the basic trained model task pf spanish xlm-roberta-base",
+    "length train": 6443,
+    "length test": 500,
+    "jaccard": 0.5222136833407863,
+    "wer": 0.8890039176518004
+  },
+  "notes": "xlm-roberta-base-task-spanish-B,  add external data. Change max len to 256.",
+  "LB": 0.0
+}

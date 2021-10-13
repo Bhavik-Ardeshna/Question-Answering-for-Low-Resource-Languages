@@ -1,0 +1,32 @@
+{
+  "model_path": "../input/xlmrobertabaseenglish",
+  "test_path": "",
+  "output_dir": "./",
+  "model_name": "xlm-roberta-base",
+  "version": "english-houlby-B",
+  "seed": 42,
+  "test_size": 0.1,
+  "debug": false,
+  "max_length": 256,
+  "doc_stride": 128,
+  "batch_size": 4,
+  "learning_rate": 0.0001,
+  "warmup_ratio": 0.1,
+  "gradient_accumulation_steps": 4,
+  "num_train_epochs": 1,
+  "weight_decay": 0.01,
+  "n_best_size": 20,
+  "max_answer_length": 30,
+  "squad_v2": false,
+  "scores": {
+    "exact_match": 68.6411149825784,
+    "f1": 81.22757946234393,
+    "description": "Used Full dataset to test the basic trained model task houlsby english xlm-roberta-base",
+    "length train": 12780,
+    "length test": 1148,
+    "jaccard": 0.7367578693087242,
+    "wer": 0.49726372592239704
+  },
+  "notes": "xlm-roberta-base-task-english-B,  add external data. Change max len to 256.",
+  "LB": 0.0
+}

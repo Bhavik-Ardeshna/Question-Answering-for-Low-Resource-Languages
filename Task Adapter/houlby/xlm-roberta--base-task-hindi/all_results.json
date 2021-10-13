@@ -1,0 +1,1 @@
+{"exact_match": 49.90138067061144, "f1": 65.70062243253462, "description": "Used Full dataset to test the basic trained model task houlsby hindi xlm-roberta-base", "length train": 6854, "length test": 507, "jaccard": 0.5970040171186964, "wer": 0.706593287844896}

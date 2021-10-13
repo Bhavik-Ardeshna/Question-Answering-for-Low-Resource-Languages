@@ -1,0 +1,1 @@
+{"exact_match": 49.31506849315068, "f1": 68.06168712414221, "description": "Used Full dataset to test the basic trained model task pf vietnamese xlm-roberta-base", "length train": 6685, "length test": 511, "jaccard": 0.5667741089614361, "wer": 0.764222940254485}

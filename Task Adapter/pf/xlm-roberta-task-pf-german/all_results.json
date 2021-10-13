@@ -1,0 +1,1 @@
+{"exact_match": 44.53125, "f1": 60.709659408964946, "description": "Used Full dataset to test the basic trained model task pf german xlm-roberta-base", "length train": 5707, "length test": 512, "jaccard": 0.5083271777721619, "wer": 0.9348030462448724}

@@ -1,0 +1,32 @@
+{
+  "model_path": "../input/xlmrobertabasevietnamese",
+  "test_path": "",
+  "output_dir": "./",
+  "model_name": "xlm-roberta-base",
+  "version": "vietnamese-B",
+  "seed": 42,
+  "test_size": 0.1,
+  "debug": false,
+  "max_length": 256,
+  "doc_stride": 128,
+  "batch_size": 4,
+  "learning_rate": 0.0001,
+  "warmup_ratio": 0.1,
+  "gradient_accumulation_steps": 4,
+  "num_train_epochs": 1,
+  "weight_decay": 0.01,
+  "n_best_size": 20,
+  "max_answer_length": 30,
+  "squad_v2": false,
+  "scores": {
+    "exact_match": 48.336594911937375,
+    "f1": 68.38877133284683,
+    "description": "Used Full dataset to test the basic trained model task pf vietnamese xlm-roberta-base",
+    "length train": 6685,
+    "length test": 511,
+    "jaccard": 0.5732318023822893,
+    "wer": 0.8105824654418665
+  },
+  "notes": "xlm-roberta-base-task-vietnamese-B,  add external data. Change max len to 256.",
+  "LB": 0.0
+}
