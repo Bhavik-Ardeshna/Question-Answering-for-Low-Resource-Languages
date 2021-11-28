@@ -1,8 +1,8 @@
-# MLQA
+# Cascading Adaptors to Leverage English Data to Improve Performance ofQuestion Answering for Low-Resource Languages
 
-MLQA (MultiLingual Question Answering) is a benchmark dataset for evaluating cross-lingual question answering performance.
-MLQA consists of over 5K extractive QA instances (12K in English) in SQuAD format in seven languages - English, Arabic, German, Spanish, Hindi, Vietnamese and Simplified Chinese.
-MLQA is *highly parallel*, with QA instances parallel between 4 different languages on average.
+Our  work  contributes  by  evaluat-ing cross-lingual performance in seven languages- Hindi, Arabic, German, Spanish, English, Viet-namese and Simplified Chinese.  Our models areevaluated on the combination of XQuAD(Artetxeet al., 2020) and MLQA(Lewis et al., 2020) datasetswhich  are  similar  to  SQuAD  (Rajpurkar  et  al.,2016) .
+
+This repository contains both links to models at Huggin Face 🤗, and Langauge/Task Adapter in [Task and Language Adapter with all configurations](https://github.com/Bhavik-Ardeshna/Question-Answering-for-Low-Resource-Languages/tree/main/Adapter%20Models).
 
 <br>
 <p align="center">
@@ -11,7 +11,7 @@ MLQA is *highly parallel*, with QA instances parallel between 4 different langua
 </p>
 <br>
 
-This repository contains both links to download the data, and the official evaluation script to evaluate models.
+
 
 
 <br>
@@ -22,85 +22,42 @@ This repository contains both links to download the data, and the official evalu
 </p>
 <br>
 
-For more details on how the dataset was created, and baseline models testing cross-lingual transfer from English,
-please refer to our paper, [MLQA: Evaluating Cross-lingual Extractive Question Answering](http://arxiv.org/abs/1910.07475)
+For more details on how the models were created, please refer to our paper, [Cascading Adaptors to Leverage English Data to Improve Performance ofQuestion Answering for Low-Resource Languages]()
 
-## Data download
+## Fine-Tuned Model at Hugging Face  🤗
 
-The data can be downloaded from here: [MLQA_V1.zip](https://dl.fbaipublicfiles.com/MLQA/MLQA_V1.zip)
 
-MLQA is split into development and test splits. The files are formatted using the popular SQuAD format. The files are named with the following convention:
- ```
- {split}-context-{context_language}-question-{question_language}.json
-```
-e.g. the file `dev-context-ar-question-es.json` contains the development split, with questions in Spanish, and context documents (and answers) in Arabic.
+| Language     |      mBERT      |  XLM-RoBERTa |
+|:----------:|:-------------:|:-------------:|
+|  Arabic (ar) | [multilingual-bert-base-cased-arabic](https://huggingface.co/bhavikardeshna/multilingual-bert-base-cased-arabic) | [xlm-roberta-base-arabic](https://huggingface.co/bhavikardeshna/xlm-roberta-base-arabic) |
+|  German (de) | [multilingual-bert-base-cased-german](https://huggingface.co/bhavikardeshna/multilingual-bert-base-cased-german) | [xlm-roberta-base-german](https://huggingface.co/bhavikardeshna/xlm-roberta-base-german) |
+|  Spanish (es) | [multilingual-bert-base-cased-spanish](https://huggingface.co/bhavikardeshna/multilingual-bert-base-cased-spanish) | [xlm-roberta-base-spanish](https://huggingface.co/bhavikardeshna/xlm-roberta-base-spanish) |
+|  Arabic (ar) | [multilingual-bert-base-cased-arabic](https://huggingface.co/bhavikardeshna/multilingual-bert-base-cased-arabic) | [xlm-roberta-base-arabic](https://huggingface.co/bhavikardeshna/xlm-roberta-base-arabic) |
+|  Chinese (zh) | [multilingual-bert-base-cased-chinese](https://huggingface.co/bhavikardeshna/multilingual-bert-base-cased-chinese) | [xlm-roberta-base-chinese](https://huggingface.co/bhavikardeshna/xlm-roberta-base-chinese) |
+|  Vietnamese (vi) | [multilingual-bert-base-cased-vietnamese](https://huggingface.co/bhavikardeshna/multilingual-bert-base-cased-vietnamese) | [xlm-roberta-base-vietnamese](https://huggingface.co/bhavikardeshna/xlm-roberta-base-vietnamese) |
+|  English (en) | [multilingual-bert-base-cased-english](https://huggingface.co/bhavikardeshna/multilingual-bert-base-cased-english) | - |
+
+## Dataset Size
 
 The following table shows how much data is in each language:
 
 Split | en | de | es | ar | zh| vi | hi | 
 |:---: |:---:  |:---: | :---: |:---: | :---: | :---: | :---: | 
-dev    | 1148  | 512  | 500   | 517  |  504  | 511   |  507  |
-test   | 11590 | 4517 | 5254  | 5335 |  5137 | 5495  | 4918  |
-
-## Evaluation
-
-The official evaluation script is `mlqa_evaluation_v1.py`. See the paper for a description of our evaluation procedure.
-
-The script is run in an analogous way to the SQuAD evaluation script, but requires the answer language as an additional command line parameter. E.g. to evaluate Hindi predictions, run the following: 
-
-```
-python mlqa_evaluation_v1.py \
-   path/to/MLQA_V1/test-context-hi-question-hi.json \
-   path/to/hindi_predictions.json \
-   hi
-```
-
-where `path/to/hindi_predictions.json` contains the model's predicted answers as a json dict, with keys being the question id, and values being the predicted answer string.
-
-## Baselines
-
-The MLQA [paper](http://arxiv.org/abs/1910.07475) presents several baselines for zero-shot experiments on MLQA, with training QA data taken from SQuAD V1.1, and using the MLQA English development set for early stopping.
-
-The F1 scores for zero-shot transfer from training with english questions and documents to target language questions and documents are shown below (see the paper for further details). There is lots of room for improvement, and we hope the community will engage in this QA challenge.
+train    | 12780  | 5707  | 6443   | 6525  |  6327  | 6685   |  6854  |
+test   | 1148 | 512 | 500  | 517 |  504 | 511  | 507  |
 
 
-| Model F1 Score | en | es | de | ar | hi| vi | zh | 
-|:--- |:---: |:---: | :---: |:---: | :---: | :---: | :---: | 
-BERT-Large    | **80.2**| - | - | - |- |- |- |
-Multilingual-BERT  | 77.7| 64.3| 57.9| 45.7| 43.8| 57.1| 57.5|
-XLM    |74.9| **68.0**| **62.2**|**54.8**| 48.8| 61.4| 61.1|
-Translate-test BERT-L    | -| 65.4 | 57.9 | 33.6 | 23.8 | 58.2 |44.2 |
-Translate-train M-BERT    | - | 53.9 | 62.0  | 51.8 | **55.0**| **62.0**| **61.4** |
-Translate-train XLM    | -| 65.2| 61.4| 54.0| 50.7| 59.3| 59.8 |
+## Conclusion
+
+We have investigated the efficacy of cascading adapters with transformer models to leverage high-resource language to improve the performance of low-resource languages on the question answering task. We trained four variants of adapter combinations for - Hindi, Arabic, German, Spanish, English, Vietnamese, and Simplified Chinese languages. We demonstrated that by using the transformer model with the multi-task adapters, the performance can be improved for the downstream task. Our results and analysis provide new insights into the generalization abilities of multilingual models for cross-lingual transfer on question answering tasks. 
 
 
-## Best Practices
-
-MLQA is intended to be an evaluation corpus. Please limit evaluations on the test set to an absolute minimum to prevent overfitting. There is a development dataset split which can be used for running intermediate evaluations during model development.
-
-If you are running experiments on MLQA, it is important that you clearly state your experimental settings. 
-If you are performing *zero-shot* experiments, you should only use the development data in the language you are training on.
-Using MLQA dev data for particular target language to tune performance in that target language is a valid research direction, 
-but is not strictly *zero-shot* and you should make sure that you explicitly state how you use the development data to ensure fair comparison in the future.
-
-## "No Answer" Instances
-
-As mentioned in the paper, some instances that cannot be answered are generated by our annotation procedure. We will release these as a separate resource shortly here.
- 
-## Translate-Train and Translate-Test Data
-
-Machine-translated data for Translate-train (SQuAD Train and Dev sets machine-translated into Arabic, German, Hindi, Vietnamese, Simplified Chinese and Spanish) can be downloaded here: [mlqa-translate-train.tar.gz](https://dl.fbaipublicfiles.com/MLQA/mlqa-translate-train.tar.gz)
-
-Machine-translated data for Translate-Test (MLQA-test set machine-translated into English) can be downloaded here: [mlqa-translate-test.tar.gz](https://dl.fbaipublicfiles.com/MLQA/mlqa-translate-test.tar.gz)
-
-## References
-
-Please cite [[1]](https://arxiv.org/abs/1901.07291) if you found the resources in this repository useful.
 
 
-[1] P Lewis, B Oğuz, R. Rinot, S. Riedel and H. Schwenk [*MLQA: Evaluating Cross-lingual Extractive Question Answering*](http://arxiv.org/abs/1910.07475)
 
+[1] Hariom A. Pandya, Bhavik Ardeshna, Dr. Brijesh S. Bhatt [*Cascading Adaptors to Leverage English Data to Improve Performance ofQuestion Answering for Low-Resource Languages*]()
 
+<!-- 
 ```
 @article{lewis2019mlqa,
   title={MLQA: Evaluating Cross-lingual Extractive Question Answering},
@@ -108,8 +65,5 @@ Please cite [[1]](https://arxiv.org/abs/1901.07291) if you found the resources i
   journal={arXiv preprint arXiv:1910.07475},
   year={2019}
 }
-```
+``` -->
 
-## License
-
-The dataset, which is derived from paragraphs in Wikipedia, is licensed under [CC-BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/legalcode). The code in this repository is licenced according the LICENSE file. 
