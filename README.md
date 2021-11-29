@@ -1,28 +1,16 @@
 # Cascading Adaptors to Leverage English Data to Improve Performance ofQuestion Answering for Low-Resource Languages
 
-Our  work  contributes  by  evaluat-ing cross-lingual performance in seven languages- Hindi, Arabic, German, Spanish, English, Viet-namese and Simplified Chinese.  Our models areevaluated on the combination of XQuAD(Artetxeet al., 2020) and MLQA(Lewis et al., 2020) datasetswhich  are  similar  to  SQuAD  (Rajpurkar  et  al.,2016) .
-
-This repository contains both links to models at Huggin Face 🤗, and Langauge/Task Adapter in [Task and Language Adapter with all configurations](https://github.com/Bhavik-Ardeshna/Question-Answering-for-Low-Resource-Languages/tree/main/Adapter%20Models).
-
-<br>
-<p align="center">
-  <img src="https://dl.fbaipublicfiles.com/MLQA/logos.png" alt="Facebook AI Research and UCL NLP"  width="60%"/>
-  <br>
-</p>
-<br>
-
-
-
-
-<br>
-<p align="center">
-  <img src="https://dl.fbaipublicfiles.com/MLQA/examples.jpg" alt="Two Instances from MLQA"  width="80%"/>
-  <br>
-  Two Instances from MLQA
-</p>
-<br>
+Our  work  contributes  by  evaluat-ing cross-lingual performance in seven languages- Hindi, Arabic, German, Spanish, English, Viet-namese and Simplified Chinese.  Our models areevaluated on the combination of XQuAD and datasets which  are  similar  to  SQuAD.
 
 For more details on how the models were created, please refer to our paper, [Cascading Adaptors to Leverage English Data to Improve Performance ofQuestion Answering for Low-Resource Languages]()
+
+<br>
+<p align="center">
+  <img src="https://github.com/Bhavik-Ardeshna/Question-Answering-for-Low-Resource-Languages/blob/main/assests/FlowChart.jpeg" alt="FLowchart"  width="80%"/>
+</p>
+<br>
+
+This repository contains both links to models at Huggin Face 🤗, and Langauge/Task Adapter in [Task and Language Adapter with all configurations](https://github.com/Bhavik-Ardeshna/Question-Answering-for-Low-Resource-Languages/tree/main/Adapter%20Models).
 
 ## Fine-Tuned Model at Hugging Face  🤗
 
