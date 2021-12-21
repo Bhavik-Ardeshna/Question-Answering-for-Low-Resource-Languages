@@ -2,7 +2,7 @@
 
 Our  work  contributes  by  evaluat-ing cross-lingual performance in seven languages- Hindi, Arabic, German, Spanish, English, Viet-namese and Simplified Chinese.  Our models areevaluated on the combination of XQuAD and datasets which  are  similar  to  SQuAD.
 
-For more details on how the models were created, please refer to our paper, [Cascading Adaptors to Leverage English Data to Improve Performance ofQuestion Answering for Low-Resource Languages]()
+For more details on how the models were created, please refer to our paper, [Cascading Adaptors to Leverage English Data to Improve Performance ofQuestion Answering for Low-Resource Languages](https://arxiv.org/abs/2112.09866)
 
 <br>
 <p align="center">
@@ -43,15 +43,17 @@ We have investigated the efficacy of cascading adapters with transformer models 
 
 
 
-[1] Hariom A. Pandya, Bhavik Ardeshna, Dr. Brijesh S. Bhatt [*Cascading Adaptors to Leverage English Data to Improve Performance ofQuestion Answering for Low-Resource Languages*]()
+[1] Hariom A. Pandya, Bhavik Ardeshna, Dr. Brijesh S. Bhatt [*Cascading Adaptors to Leverage English Data to Improve Performance ofQuestion Answering for Low-Resource Languages*](https://arxiv.org/abs/2112.09866)
 
-<!-- 
+
 ```
-@article{lewis2019mlqa,
-  title={MLQA: Evaluating Cross-lingual Extractive Question Answering},
-  author={Lewis, Patrick and O\u{g}uz, Barlas and Rinott, Ruty and Riedel, Sebastian and Schwenk, Holger},
-  journal={arXiv preprint arXiv:1910.07475},
-  year={2019}
+@misc{pandya2021cascading,
+      title={Cascading Adaptors to Leverage English Data to Improve Performance of Question Answering for Low-Resource Languages}, 
+      author={Hariom A. Pandya and Bhavik Ardeshna and Dr. Brijesh S. Bhatt},
+      year={2021},
+      eprint={2112.09866},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL}
 }
-``` -->
+```
 
