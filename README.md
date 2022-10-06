@@ -1,4 +1,4 @@
-# Cascading Adaptors to Leverage English Data to Improve Performance ofQuestion Answering for Low-Resource Languages
+# Cascading Adaptors to Leverage English Data to Improve Performance of Question Answering for Low-Resource Languages
 
 Our  work  contributes  by  evaluat-ing cross-lingual performance in seven languages- Hindi, Arabic, German, Spanish, English, Viet-namese and Simplified Chinese.  Our models areevaluated on the combination of XQuAD and datasets which  are  similar  to  SQuAD.
 
