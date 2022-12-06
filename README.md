@@ -2,7 +2,7 @@
 
 Our  work  contributes  by  evaluat-ing cross-lingual performance in seven languages- Hindi, Arabic, German, Spanish, English, Viet-namese and Simplified Chinese.  Our models areevaluated on the combination of XQuAD and datasets which  are  similar  to  SQuAD.
 
-For more details on how the models were created, please refer to our paper, [Cascading Adaptors to Leverage English Data to Improve Performance ofQuestion Answering for Low-Resource Languages](https://arxiv.org/abs/2112.09866)
+For more details on how the models were created, please refer to our paper, [Cascading Adaptors to Leverage English Data to Improve Performance ofQuestion Answering for Low-Resource Languages](https://aclanthology.org/2021.icon-main.66/)
 
 <br>
 <p align="center">
@@ -43,17 +43,23 @@ We have investigated the efficacy of cascading adapters with transformer models 
 
 
 
-[1] Hariom A. Pandya, Bhavik Ardeshna, Dr. Brijesh S. Bhatt [*Cascading Adaptors to Leverage English Data to Improve Performance ofQuestion Answering for Low-Resource Languages*](https://arxiv.org/abs/2112.09866)
+[1] Hariom A. Pandya, Bhavik Ardeshna, Dr. Brijesh S. Bhatt [*Cascading Adaptors to Leverage English Data to Improve Performance ofQuestion Answering for Low-Resource Languages*](https://aclanthology.org/2021.icon-main.66/)
 
 
 ```
-@misc{pandya2021cascading,
-      title={Cascading Adaptors to Leverage English Data to Improve Performance of Question Answering for Low-Resource Languages}, 
-      author={Hariom A. Pandya and Bhavik Ardeshna and Dr. Brijesh S. Bhatt},
-      year={2021},
-      eprint={2112.09866},
-      archivePrefix={arXiv},
-      primaryClass={cs.CL}
+@inproceedings{pandya-etal-2021-cascading,
+    title = "Cascading Adaptors to Leverage {E}nglish Data to Improve Performance of Question Answering for Low-Resource Languages",
+    author = "Pandya, Hariom  and
+      Ardeshna, Bhavik  and
+      Bhatt, Brijesh",
+    booktitle = "Proceedings of the 18th International Conference on Natural Language Processing (ICON)",
+    month = dec,
+    year = "2021",
+    address = "National Institute of Technology Silchar, Silchar, India",
+    publisher = "NLP Association of India (NLPAI)",
+    url = "https://aclanthology.org/2021.icon-main.66",
+    pages = "544--549",
+    abstract = "Transformer based architectures have shown notable results on many down streaming tasks including question answering. The availability of data, on the other hand, impedes obtaining legitimate performance for low-resource languages. In this paper, we investigate the applicability of pre-trained multilingual models to improve the performance of question answering in low-resource languages. We tested four combinations of language and task adapters using multilingual transformer architectures on seven languages similar to MLQA dataset. Additionally, we have also proposed zero-shot transfer learning of low-resource question answering using language and task adapters. We observed that stacking the language and the task adapters improves the multilingual transformer models{'} performance significantly for low-resource languages. Our code and trained models are available at: https://github.com/CALEDIPQALL/",
 }
 ```
 
